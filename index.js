@@ -17,7 +17,7 @@ module.exports = class motivationPlugin extends Plugin {
     }
 
   async quote() {
-    const data = await get(`http://api.quotable.io/random`);
+    const data = await get(`http://random-word-api.herokuapp.com/all`);
     return {
       send: true,
       result: `${data.body.content}`
